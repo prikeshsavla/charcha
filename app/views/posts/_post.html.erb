@@ -1,12 +1,17 @@
-<blockquote  id="<%= dom_id post %>">
-  <%= post.content %>
-  <footer>
-    <cite>
-      <small><%= time_tag post.created_at, 'data-local': "time-ago" %>
-      <% if post.replies.count > 0%>
-      <%= pluralize post.replies.count, 'reply' %>   
-      <% end %>
-      </small>  
-    </cite>
-  </footer>
-</blockquote>
+<div id="<%= dom_id post %>">
+  <p>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </p>
+ <p>
+    Posted <%= time_tag post.created_at, "data-local": "time-ago" %>
+  </p>
+   <p>
+    Comments: <%= pluralize post.comments.count, "comment" %>
+  </p>
+  <p>
+    <strong>Content:</strong>
+    <%= post.content %>
+  </p>
+
+</div>
