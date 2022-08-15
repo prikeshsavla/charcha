@@ -1,12 +1,12 @@
-
 <blockquote  id="<%= dom_id post %>">
   <%= post.content %>
   <footer>
     <cite>
-      <small><%= time_tag post.created_at, 'data-local': "time-ago" %></small>  
+      <small><%= time_tag post.created_at, 'data-local': "time-ago" %>
       <% if post.replies.count > 0%>
-      <%= post.replies.count %> replies  
+      <%= pluralize post.replies.count, 'reply' %>   
       <% end %>
+      </small>  
     </cite>
   </footer>
 </blockquote>

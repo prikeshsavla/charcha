@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
-<%= link_to "Back to posts", posts_path %>
-  <%= render "post_with_replies", post: @post %>
-  <%= render "reply-form", post: Post.new(posts_id: @post.id) %>
-<div>
+  <%= link_to "Back to posts", posts_path %>
+    <%= render "post_with_replies", post: @post %>
+    <%= render "posts/replies/new", post: Post.new(posts_id: @post.id) %>
+  <div>
 </div>
