@@ -4,7 +4,8 @@
   <footer>
 
     <cite>
-  <small><%= time_tag post.created_at, 'data-local': "time-ago" %></small>  
+      <small><%= time_tag post.created_at, 'data-local': "time-ago" %></small>  
     </cite>
   </footer>
+      <%= render post.replies %>
 </blockquote>
