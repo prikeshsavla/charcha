@@ -1,24 +1,12 @@
-# README
+# Charcha
+A twitter clone in rails and BDD testing with RSpec to experience hotwire in rails, Charcha(Hindi) = Discussion.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Roadmap
+- [ ] Posts
+- [ ] Posts replies
+- [ ] Live Stats 
+- [ ] Admin
+	- [ ] Basic Auth
+    - [ ] Stats of users and posts
+	- [ ] Users index and edit view
+	- [ ] Posts index view
