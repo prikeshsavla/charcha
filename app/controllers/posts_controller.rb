@@ -22,10 +22,13 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
-
     respond_to do |format|
       if @post.save
-        format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
+        if @post.parent.present?
+          format.html { redirect_to post_url(@post.parent), notice: "Post was successfully replied." }
+        else 
+          format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
+        end
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +68,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :posts_id)
     end
 end

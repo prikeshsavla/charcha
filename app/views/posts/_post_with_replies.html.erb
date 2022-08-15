@@ -4,9 +4,7 @@
   <footer>
     <cite>
       <small><%= time_tag post.created_at, 'data-local': "time-ago" %></small>  
-      <% if post.replies.count > 0%>
-      <%= post.replies.count %> replies  
-      <% end %>
     </cite>
   </footer>
+      <%= render post.replies %>
 </blockquote>

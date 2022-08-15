@@ -1,0 +1,21 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div style="color: red">
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><mark><%= error.full_message %></mark> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :posts_id %>
+    <%= form.label :reply, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.submit :Reply %>
+  </div>
+<% end %>
