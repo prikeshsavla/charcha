@@ -1,0 +1,10 @@
+
+<blockquote  id="<%= dom_id post %>">
+  <%= post.content %>
+  <footer>
+
+    <cite>
+  <small><%= time_tag post.created_at, 'data-local': "time-ago" %></small>  
+    </cite>
+  </footer>
+</blockquote>
