@@ -3,11 +3,10 @@ A twitter clone in rails and BDD testing with RSpec to experience hotwire in rai
 
 # Roadmap
 - [x] Posts
-- [x] Posts replies
-- [ ] Live post replies
+- [x] Posts comments
+- [x] Live post comments
+- [ ] Post comment counter, old comment time ago
 - [ ] Admin
-	- [ ] Basic Auth
 	- [ ] Live Stats 
-    - [ ] Stats of users and posts
-	- [ ] Users index and edit view
-	- [ ] Posts index view
+    - [ ] Stats of posts
+	- [ ] search posts with turbo
