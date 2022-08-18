@@ -1,17 +1,13 @@
-<div id="<%= dom_id post %>">
+<blockquote id="<%= dom_id post %>">
+  
+    <h4><%= post.title %></h4>
+
   <p>
-    <strong>Title:</strong>
-    <%= post.title %>
+  <%= post.content %>
   </p>
  <p>
     Posted <%= time_tag post.created_at, "data-local": "time-ago" %>
-  </p>
-   <p>
+|
     Comments: <%= pluralize post.comments.count, "comment" %>
   </p>
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
-  </p>
-
-</div>
+</blockquote>
