@@ -1,5 +1,5 @@
-<blockquote id="<%= dom_id post %>">
-  
+<div id="<%= dom_id post %>">
+  <blockquote>
     <h4><%= post.title %></h4>
 
   <p>
@@ -10,4 +10,5 @@
 |
     Comments: <%= pluralize post.comments.count, "comment" %>
   </p>
-</blockquote>
+  </blockquote>
+</div>
