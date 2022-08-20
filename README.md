@@ -5,8 +5,7 @@ A twitter clone in rails and BDD testing with RSpec to experience hotwire in rai
 - [x] Posts
 - [x] Posts comments
 - [x] Live post comments
-- [ ] Post comment counter, old comment time ago
+- [x] Post comment counter, old comment time ago
 - [ ] Admin
-	- [ ] Live Stats 
-    - [ ] Stats of posts
+	- [ ] Live Stats of posts and comments
 	- [ ] search posts with turbo

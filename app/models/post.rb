@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
     validates_presence_of :title
     has_rich_text :content
-    has_many :comments
+    has_many :comments, dependent: :destroy
     after_touch { broadcast_update }
 end
