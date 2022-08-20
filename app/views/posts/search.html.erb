@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Search Posts for "<%= @query %>"</h1>
+<%= turbo_frame_tag "posts_search", target: "posts" do %>
+<form>
+  <fieldset>
+    <input type="text" name="query" placeholder="Search Posts" value="<%= @query %>" id="nameField">
+  </fieldset>
+  <button>Search</button>
+</form>
+<% end %>
+<%= turbo_frame_tag "posts" do %>
+    <% @posts.each do |post| %>
+    <%= link_to post do %>
+      <%= render post %>
+    <% end %>
+    <% end %>
+<% end %>
+
+

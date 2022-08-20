@@ -6,6 +6,12 @@ class PostsController < ApplicationController
     @posts = Post.all.order('created_at DESC')
   end
 
+  # GET /posts or /posts.json
+  def search
+    @query = params[:query]
+    @posts = Post.where('title LIKE :search OR content LIKE :search', search: "%#{@query}%").order('created_at DESC')
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
   end
