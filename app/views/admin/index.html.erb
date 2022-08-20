@@ -1,0 +1,15 @@
+<h1>Stats</h1>
+
+<h2>
+    Posts
+</h2>
+<%= turbo_stream_from "stats" %>
+<%= turbo_frame_tag "posts_count" do%>
+    <%= render "posts/stats", posts: @posts %>
+<% end %>
+<h2>
+    Comments
+</h2>
+<%= turbo_frame_tag "comments_count" do%>
+    <%= render "comments/stats", comments: @comments %>
+<% end %>
