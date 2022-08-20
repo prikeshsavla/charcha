@@ -2,14 +2,13 @@
 
 <h1>Posts </h1>
 
-<%= link_to "New post", new_post_path, class:"button button-outline" %>
+<%= link_to "New post", new_post_path, class: "button button-outline" %>
 <%= turbo_frame_tag "posts_search", target: "posts" do %>
-<form >
-  <fieldset>
-    <input type="text" name="query" minlength="3" placeholder="Search Posts" value="<%= @query %>" id="nameField">
-  </fieldset>
-  <button>Search</button>
-</form>
+<%= form_with url: posts_path, method: :get, data: { turbo_frame: "posts", turbo_action: "advance", controller: "hello" } do |form| %>
+    <fieldset>
+      <%= form.text_field :query, placeholder: "Search Posts", data: { action: "input->hello#search", "hello-target": "query" } %>
+      </fieldset>
+<% end %>
 <% end %>
 <%= turbo_frame_tag "posts" do %>
     <% if @query %>
